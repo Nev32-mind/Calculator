@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        .main {
+            color: rgb(255, 255, 255);
+            font-size: 80px;
+            background-color: rgb(0, 0, 0);
+            height: 700px;
+            width: 1500px;
+            border: 2px rgb(255, 0, 0) solid;
+            border-radius: 15px;
+            text-align: center;
+            padding: 15px;
+        }
+        #plus {
+            background-color: rgb(255, 255, 255);
+            color: rgb(88, 0, 74);
+            height: 100px;
+            width: 160px;
+            border: 2px rgb(255, 0, 0) solid;
+            border-radius: 15px;
+            font-size: 100px;
+            text-align: center;
+        }
+        #minus {
+            background-color: rgb(255, 255, 255);
+            color: rgb(88, 0, 74);
+            height: 100px;
+            width: 160px;
+            border: 2px rgb(255, 0, 0) solid;
+            border-radius: 15px;
+            font-size: 100px;
+            text-align: center;
+        }
+        #ravno {
+            background-color: rgb(255, 255, 255);
+            color: rgb(88, 0, 74);
+            height: 100px;
+            width: 160px;
+            border: 2px rgb(255, 0, 0) solid;
+            border-radius: 15px;
+            font-size: 100px;
+            text-align: center;
+        }
+        #umnoj {
+            background-color: rgb(255, 255, 255);
+            color: rgb(88, 0, 74);
+            height: 100px;
+            width: 160px;
+            border: 2px rgb(255, 0, 0) solid;
+            border-radius: 15px;
+            font-size: 100px;
+            text-align: center;
+        }
+        #delen {
+            background-color: rgb(255, 255, 255);
+            color: rgb(88, 0, 74);
+            height: 100px;
+            width: 160px;
+            border: 2px rgb(255, 0, 0) solid;
+            border-radius: 15px;
+            font-size: 100px;
+            text-align: center;
+        }
+        #chislo1 {
+            height: 100px;
+            width: 400px;
+            border: 2px rgb(255, 0, 0) solid;
+            border-radius: 15px;
+            font-size: 60px;
+            text-align: center;
+        }
+        #chislo2 {
+            height: 100px;
+            width: 400px;
+            border: 2px rgb(255, 0, 0) solid;
+            border-radius: 15px;
+            font-size: 60px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <input placeholder='Первое число'type="number" id="chislo1">
+        <input placeholder='Второе число'type="number" id="chislo2">
+        <br>
+        <button id="plus">+</button>
+        <button id="minus">-</button>
+        <button id="umnoj">*</button>
+        <button id="delen">/</button>
+        <button id="ravno">=</button>
+        <h1 id="total">Результат:</h1>
+    </div>
+
+    <script>
+        const chislo1 = document.getElementById('chislo1');
+        const chislo2 = document.getElementById('chislo2');
+        const plus = document.getElementById('plus');
+        const minus = document.getElementById('minus');
+        const umnoj = document.getElementById('umnoj');
+        const delen = document.getElementById('delen');
+        const ravno = document.getElementById('ravno');
+        const total = document.getElementById('total');
+        let a;
+        plus.onclick = function() {
+            a = '+'
+        }
+        minus.onclick = function() {
+            a = '-'
+        }
+        umnoj.onclick = function() {
+            a = '*'
+        }
+        delen.onclick = function() {
+            a = '/'
+        }
+        ravno.onclick = function() {
+            if (a == '+') {
+                const sum = Number(chislo1.value) + Number(chislo2.value);
+                total.textContent = sum;
+            }
+            else if (a == '-') {
+                const min = Number(chislo1.value) - Number(chislo2.value);
+                total.textContent = min;  
+            }
+            else if (a == '*') {
+                const umn = Number(chislo1.value) * Number(chislo2.value);
+                total.textContent = umn;  
+            }else if (a == '/') {
+                const del = Number(chislo1.value) / Number(chislo2.value);
+                total.textContent = del;  
+            }  
+        }
+
+        // function car(){
+        //     let a = 5;
+        //     let b = 4;
+        //     alert(a+b);
+        // }
+        // car();
+    </script>
+    Block
+    <div></div>
+    <main></main>
+    <body></body>
+    <article></article>
+    <h1></h1>
+    Lines
+    <span></span>
+    <button></button>
+    <input type='text'>
+    <a href="#">Ссылка</a>
+</body>
+</html>
